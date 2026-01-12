@@ -42,12 +42,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className={`
+          {/* <div className={`
             flex flex-col space-y-10 inset-0 fixed top-0 h-screen bg-gray-900/95 backdrop-blur-xl lg:backdrop-blur-none lg:bg-transparent py-24 px-8 sm:px-10
             transition-all duration-500 ease-out lg:flex-row lg:flex-1 lg:py-0 lg:px-0 lg:space-y-0 lg:gap-x-10 lg:relative lg:top-0 lg:h-full lg:items-center lg:justify-between
             ${openNavbar ? "visible opacity-100 translate-x-0" : "-translate-x-full opacity-0 lg:translate-x-0 lg:visible lg:opacity-100"}
-          `}>
-            <ul className="flex flex-col gap-y-6 text-gray-300 lg:items-center lg:flex-row lg:gap-x-8 lg:h-full lg:justify-end lg:flex-1">
+          `}> */}
+            {/* <ul className="flex flex-col gap-y-6 text-gray-300 lg:items-center lg:flex-row lg:gap-x-8 lg:h-full lg:justify-end lg:flex-1">
               <li>
                 <Link 
                   to="/login" 
@@ -70,7 +70,7 @@ const Navbar = () => {
                   </Link>
                 </li>
               )}
-            </ul>
+            </ul> */}
 
             {/* CTA Button */}
             <div className="w-full flex sm:w-max lg:min-w-max lg:items-center">
@@ -86,7 +86,7 @@ const Navbar = () => {
                 </svg>
               </Link>
             </div>
-          </div>
+          {/* </div> */}
 
           {/* Mobile Menu Button */}
           <div className="flex items-center lg:hidden">
