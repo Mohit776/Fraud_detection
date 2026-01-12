@@ -1,0 +1,49 @@
+🕵️‍♂️ AI Public Integrity & Fraud Detection System
+This repository hosts a multi-module AI system designed to detect fraud, anomalies, and corruption in government public spending. The system is composed of four distinct machine learning models, each targeting a specific type of financial crime.
+
+📂 Model Artifacts & Usage
+Below is the complete list of trained models (.pkl files) required to run the detection engine.
+
+1. Welfare & Healthcare Fraud Detector
+Purpose: Detects "Ghost Beneficiaries" and overbilling in healthcare claims. It identifies transactions where costs or durations are statistically impossible (e.g., a patient billed for 500 miles of travel in 1 hour).
+
+Algorithm: Supervised Learning (Random Forest Classifier)
+
+File Name: fraud_detection_model.pkl
+
+Input Data: Medical Claims (CSV) containing Duration, Total_Cost, Reimbursement_Amt.
+
+2. Treasury & Spending Anomaly Monitor
+Purpose: Detects "Unknown Unknowns" in general government spending. It flags rare anomalies such as unusual transaction amounts (e.g., $10M at 3 AM) or structuring (splitting large payments to bypass limits).
+
+Algorithm: Unsupervised Learning (Isolation Forest)
+
+File Name: spending_anomaly_model.pkl
+
+Input Data: Transaction Logs (CSV) containing Amount and transaction metadata.
+
+3. Legal Document & Contract Scanner
+Purpose: Analyzes unstructured text from contracts, emails, and tenders. It detects fabricated or suspicious language (sensationalism, urgency, vague terms) common in fraudulent documents versus the formal tone of official records.
+
+Algorithm: Natural Language Processing (Logistic Regression + TF-IDF)
+
+File Names:
+
+legal_nlp_model.pkl (The Classifier)
+
+text_vectorizer.pkl (The Text-to-Number Translator - Required)
+
+Input Data: Raw Text (Strings) from documents.
+
+4. Bid Rigging & Collusion Hunter
+Purpose: Detects "Cartels" (companies secretly working together) and "Monopolies". It maps relationships between vendors based on shared contact info or co-bidding patterns to flag non-competitive behavior.
+
+Algorithm: Graph Theory / Network Analysis (NetworkX)
+
+File Names:
+
+bid_rigging_graph.pkl (The Network Database)
+
+vendor_names.pkl (Vendor ID lookup dictionary)
+
+Input Data: Procurement History (CSV) containing Tender_ID and Participant_ID.
